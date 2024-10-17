@@ -1,0 +1,85 @@
+.todoCardContainer{
+    box-sizing: border-box;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: space-between;
+    row-gap: 3em;
+}
+.landingPageHeading{
+    color: #FCCD2A;
+    text-align: center;
+}
+.emptyTodoHeading{
+    color: #FCCD2A;
+    text-align: center;
+}
+.addTodoContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.addTodoBtn{
+    border: 1px solid #FCCD2A;
+    width: 150px;
+    padding: 1em;
+    background-color: #FCCD2A;
+    border-radius: 5px;
+    font-family: cursive;
+}
+.addTodoBtn:hover{
+    cursor: pointer;
+}
+
+@media (width > 2400px) {
+    .todoCardContainer{
+        grid-template-columns: repeat(6, auto);
+    }
+}
+
+@media (2400px > width > 1800px) {
+    .todoCardContainer{
+        grid-template-columns: repeat(5, auto);
+    }
+}
+
+@media (1024px <= width < 1121px) {
+    .todoCardContainer{
+        grid-template-columns: repeat(3, auto);
+        font-size: 0.9em;
+    }
+}
+@media (768px <= width < 1024px) {
+    .todoCardContainer{
+        grid-template-columns: repeat(3, auto);
+    }
+}
+@media (width < 768px) {
+    .todoCardContainer{
+        grid-template-columns: repeat(2, auto);
+        justify-content: space-evenly;
+    }
+}
+
+@media (width < 590px) {
+    .addTodoBtn{
+        width: 120px;
+        padding: 0.8em;
+        font-size: 12px;
+        margin-top: 3em;
+    }
+    .todoCardContainer{
+        justify-content: space-between;
+    }
+}
+
+@media (width < 426px) {
+    .todoCardContainer{
+        /* grid-template-columns: repeat(1, auto); */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -1,0 +1,110 @@
+.loginTitle{
+    color: #FCCD2A;
+    text-align: center;
+}
+
+.formContainer{
+    padding: 2em 30%;
+}
+.loginForm{
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    background-color: #FCCD2A;
+    border-radius: 5px;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+.loginForm input{
+    padding: 1em;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+}
+.particularField{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.submitLogin{
+    width: 150px;
+    background-color: #282c34;
+    color: #FCCD2A;
+    border: none;
+    font-family: cursive;
+    border-radius: 5px;
+    padding: 1em;
+}
+.submitLogin:hover{
+    cursor: pointer;
+}
+.disclamer{
+    font-size: large;
+}
+
+@media (875px <= width < 1280px) {
+    .loginForm{
+        font-size: 0.8em;
+    }
+    .disclamer{
+        font-size: small;
+    }
+}
+@media (660px <= width < 875px) {
+    .formContainer{
+        padding: 2em 20%;
+    }
+    .disclamer{
+        font-size: small;
+    }
+}
+@media (540px <= width < 660px) {
+    .formContainer{
+        padding: 2em 15%;
+        font-size: 0.8em;
+    }
+    .disclamer{
+        font-size: small;
+    }
+}
+
+@media (width < 540px) {
+    .formContainer{
+        padding: 2em 10%;
+        font-size: 0.8em;
+    }
+    .disclamer{
+        font-size: x-small;
+    }
+    .loginTitle{
+        font-size: 1.5em;
+    }
+    .loginForm input{
+        padding: 0.7em;
+    }
+    .submitLogin{
+        width: 120px;
+        padding: 0.7em;
+    }
+}
+@media (width < 385px) {
+    .loginForm{
+        padding: 1.5em;
+    }
+    .loginTitle{
+        font-size: 1.2em;
+    }
+    .disclamer{
+        font-size: xx-small;
+    }
+    .formContainer{
+        font-size: 0.6em;
+    }
+    .loginForm input{
+        padding: 0.5em;
+    }
+    .submitLogin{
+        width: 100px;
+    }
+}

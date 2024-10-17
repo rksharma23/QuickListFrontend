@@ -1,0 +1,97 @@
+.registerTitle{
+    color: #FCCD2A;
+    text-align: center;
+}
+
+.formContainer{
+    padding: 2em 30%;
+}
+.registerationForm{
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    background-color: #FCCD2A;
+    border-radius: 5px;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+.registerationForm input{
+    padding: 1em;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+}
+.particularField{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.submitRegister{
+    width: 150px;
+    background-color: #282c34;
+    color: #FCCD2A;
+    border: none;
+    font-family: cursive;
+    border-radius: 5px;
+    padding: 1em;
+}
+.submitLogin:hover{
+    cursor: pointer;
+}
+.disclamer{
+    font-size: large;
+}
+
+@media (width < 1250px) {
+    .formContainer{
+        padding: 2em 25%;
+    }
+}
+@media (width < 1001px) {
+    .formContainer{
+        padding: 2em 20%;
+    }
+}
+@media (width < 833px) {
+    .formContainer{
+        padding: 2em 15%;
+        font-size: 0.8em;
+    }
+}
+@media (width < 690px) {
+    .formContainer{
+        padding: 2em 10%;
+    }
+}
+@media (width < 601px) {
+    .formContainer{
+        padding: 1em 5%;
+        font-size: 0.7em;
+    }
+    .registerTitle{
+        font-size: 1.5em;
+    }
+    .disclamer{
+        font-size: small;
+    }
+}
+@media (width < 400px) {
+    .formContainer{
+        padding: 1em 5%;
+        font-size: 0.6em;
+    }
+    .registerationForm input{
+        padding: 0.7em;
+    }
+    .submitRegister{
+        width: 120px;
+        padding: 0.7em;
+    }
+    .registerTitle{
+        font-size: 1em;
+    }
+    .disclamer{
+        font-size: x-small;
+    }
+}

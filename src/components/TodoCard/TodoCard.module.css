@@ -1,0 +1,298 @@
+.card {
+  width: 300px;
+  height: 350px;
+  background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+  border-radius: 20px;
+  transition: all .3s;
+}
+
+.card2 {
+  width: 300px;
+  height: 350px;
+  background-color: #1a1a1a;
+  transition: all .2s;
+  box-sizing: border-box;
+  padding: 1em;
+  color: #FCCD2A;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-size: 0.8em;
+}
+
+.card2 .todoDescription {
+  overflow-y: auto;
+}
+
+.card2 .todoDescription::-webkit-scrollbar {
+  display: none;
+}
+
+.card2 .buttonWrapper {
+  position: absolute;
+  bottom: 1em;
+  display: flex;
+  gap: 20px;
+}
+
+.card2:hover {
+  transform: scale(0.98);
+  border-radius: 20px;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+}
+
+
+
+/*Edit button*/
+.edit_btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #FCCD2A;
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none !important;
+}
+
+.edit_svgIcon {
+  width: 17px;
+  transition-duration: 0.3s;
+}
+
+.edit_svgIcon path {
+  fill: black;
+}
+
+.edit_btn:hover {
+  width: 120px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: #FCCD2A;
+  align-items: center;
+}
+
+.edit_btn:hover .edit_svgIcon {
+  width: 20px;
+  transition-duration: 0.3s;
+  transform: translateY(60%);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.edit_btn::before {
+  display: none;
+  content: "Edit";
+  color: black;
+  transition-duration: 0.3s;
+  font-size: 2px;
+}
+
+.edit_btn:hover::before {
+  display: block;
+  padding-right: 10px;
+  font-size: 13px;
+  opacity: 1;
+  transform: translateY(0px);
+  transition-duration: 0.3s;
+}
+
+
+
+/*Delete Btn*/
+/* From Uiverse.io by vinodjangid07 */
+.del_btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #FCCD2A;
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+  cursor: pointer;
+  transition-duration: .3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.del_svgIcon {
+  width: 12px;
+  transition-duration: .3s;
+}
+
+.del_svgIcon path {
+  fill: black;
+}
+
+.del_btn:hover {
+  width: 140px;
+  border-radius: 50px;
+  transition-duration: .3s;
+  background-color: #FCCD2A;
+  align-items: center;
+}
+
+.del_btn:hover .del_svgIcon {
+  width: 50px;
+  transition-duration: .3s;
+  transform: translateY(60%);
+}
+
+.del_btn::before {
+  position: absolute;
+  top: -20px;
+  content: "Delete";
+  color: black;
+  transition-duration: .3s;
+  font-size: 2px;
+}
+
+.del_btn:hover::before {
+  font-size: 13px;
+  opacity: 1;
+  transform: translateY(30px);
+  transition-duration: .3s;
+}
+
+.todoDescription {
+  text-wrap: wrap;
+}
+
+.todoTitle {
+  text-wrap: wrap;
+}
+
+/* 1121px < width < 1321px */
+
+@media (1440px > width > 1121px) {
+  .card,
+  .card2 {
+    width: 240px;
+    height: 290px;
+    font-size: 0.8em;
+  }
+
+  .edit_btn,
+  .del_btn {
+    width: 32px;
+    height: 32px;
+  }
+  .edit_btn:hover,
+  .del_btn:hover{
+    width: 120px;
+  }
+}
+
+@media (768px <= width < 1024px) {
+
+  .card,
+  .card2 {
+    width: 230px;
+    height: 280px;
+    font-size: 0.8em;
+  }
+
+  .edit_btn,
+  .del_btn {
+    width: 30px;
+    height: 30px;
+  }
+  .edit_btn:hover,
+  .del_btn:hover{
+    width: 95px;
+  }
+  .card2 .buttonWrapper{
+    gap: 15px;
+  }
+}
+
+@media (690px <= width < 768px) {
+
+  .card,
+  .card2 {
+    font-size: 0.9em;
+  }
+
+  .edit_btn,
+  .del_btn {
+    width: 28px;
+    height: 28px;
+  }
+
+  .edit_btn:hover,
+  .del_btn:hover{
+    width: 90px;
+  }
+}
+
+@media (width < 690px) {
+
+  .card,
+  .card2 {
+    width: 220px;
+    height: 270px;
+    font-size: 0.8em;
+  }
+
+  .edit_btn,
+  .del_btn {
+    width: 28px;
+    height: 28px;
+  }
+
+  .edit_btn:hover,
+  .del_btn:hover{
+    width: 90px;
+  }
+}
+
+@media (width < 530px) {
+  .card, .card2{
+    width: 200px;
+    height: 250px;
+    font-size: 0.7em
+  }
+}
+
+@media (width < 470px) {
+  .card, .card2{
+    width: 180px;
+  }
+
+  .edit_btn:hover, .del_btn:hover{
+    width: 85px;
+  }
+}
+
+@media (width < 426px) {
+
+  .card, .card2{
+    width: 290px;
+    height: 230px;
+  }
+
+  .card2{
+    padding: 2em;
+  }
+
+  .card2 .buttonWrapper {
+    bottom: 2em;
+    gap: 15px;
+  }
+}
