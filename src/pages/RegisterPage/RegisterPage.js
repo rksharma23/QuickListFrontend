@@ -46,14 +46,14 @@ function RegisterPage() {
         console.error('Error Response:', error.response.data);
         console.error('Status Code:', error.response.status);
         window.alert(error.response.data.message)
-      } else if (error.request) {
+      } else if (error.request.data.message) {
         // Request was made but no response was received
         window.alert(error.response.data.message)
         console.error('Error Request:', error.request);
       } else {
         // Something else happened while setting up the request
-        window.alert(error.response.data.message)
-        console.error('Error Message:', error.message);
+        window.alert(error)
+        console.error('Error Message:', error);
       }
     }
   }
@@ -81,7 +81,7 @@ function RegisterPage() {
         
           <div className={styles.particularField}>
           <button className={styles.submitRegister} onClick={handleRegister}>Submit</button>
-          <p className={styles.disclamer}>Already have an Account, <Link to={"/login"}>Click-Here</Link> to Login</p>
+          <p className={styles.disclamer}>Already have an Account, <Link to={"/login"}>Click-Here</Link> to Login <br/> <Link to={"/"} >Back to Home</Link> </p>
           </div>
 
         </form>

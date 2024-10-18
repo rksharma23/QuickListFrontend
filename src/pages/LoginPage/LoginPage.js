@@ -86,7 +86,8 @@ function LoginPage() {
             <div className={styles.particularField}>
               <button className={styles.submitLogin}  onClick={handleLogin}>Submit</button>
               <p className={styles.disclamer}>
-                Don't have an Account, <Link to={"/register"}>Click-Here</Link> to Register
+                Don't have an Account, <Link to={"/register"}>Click-Here</Link> to Register <br/>
+                <Link to={'/'} >Back to Home</Link>
               </p>
             </div>
           </form>
